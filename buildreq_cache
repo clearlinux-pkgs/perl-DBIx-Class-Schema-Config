@@ -1,0 +1,8 @@
+0.001011
+perl(Config::Any)
+perl(DBD::SQLite)
+perl(DBIx::Class)
+perl(File::HomeDir)
+perl(Hash::Merge)
+perl(Module::Install)
+perl(namespace::clean)
