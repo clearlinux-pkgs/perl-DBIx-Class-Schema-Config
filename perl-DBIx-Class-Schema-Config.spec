@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-Schema-Config
 Version  : 0.001011
-Release  : 7
+Release  : 8
 URL      : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001011.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001011.tar.gz
 Summary  : 'Credential Management for DBIx::Class'
