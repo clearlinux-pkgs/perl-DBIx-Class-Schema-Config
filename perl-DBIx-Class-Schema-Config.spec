@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-Schema-Config
 Version  : 0.001013
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001013.tar.gz
 Summary  : 'Credential Management for DBIx::Class'
@@ -16,6 +16,7 @@ BuildRequires : perl(DBD::SQLite)
 BuildRequires : perl(DBIx::Class)
 BuildRequires : perl(File::HomeDir)
 BuildRequires : perl(Hash::Merge)
+BuildRequires : perl(Module::Install)
 BuildRequires : perl(namespace::clean)
 
 %description
@@ -25,6 +26,7 @@ No detailed description available
 Summary: dev components for the perl-DBIx-Class-Schema-Config package.
 Group: Development
 Provides: perl-DBIx-Class-Schema-Config-devel = %{version}-%{release}
+Requires: perl-DBIx-Class-Schema-Config = %{version}-%{release}
 
 %description dev
 dev components for the perl-DBIx-Class-Schema-Config package.
