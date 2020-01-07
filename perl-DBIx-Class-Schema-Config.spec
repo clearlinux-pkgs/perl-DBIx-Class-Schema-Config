@@ -4,12 +4,13 @@
 #
 Name     : perl-DBIx-Class-Schema-Config
 Version  : 0.001013
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001013.tar.gz
 Summary  : 'Credential Management for DBIx::Class'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-DBIx-Class-Schema-Config-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Config::Any)
 BuildRequires : perl(DBD::SQLite)
@@ -32,14 +33,24 @@ Requires: perl-DBIx-Class-Schema-Config = %{version}-%{release}
 dev components for the perl-DBIx-Class-Schema-Config package.
 
 
+%package perl
+Summary: perl components for the perl-DBIx-Class-Schema-Config package.
+Group: Default
+Requires: perl-DBIx-Class-Schema-Config = %{version}-%{release}
+
+%description perl
+perl components for the perl-DBIx-Class-Schema-Config package.
+
+
 %prep
 %setup -q -n DBIx-Class-Schema-Config-0.001013
+cd %{_builddir}/DBIx-Class-Schema-Config-0.001013
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -62,8 +73,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/Class/Schema/Config.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/DBIx::Class::Schema::Config.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/Class/Schema/Config.pm
