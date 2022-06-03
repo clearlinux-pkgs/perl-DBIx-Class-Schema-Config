@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-Schema-Config
 Version  : 0.001014
-Release  : 23
+Release  : 24
 URL      : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001014.tar.gz
 Summary  : 'Manage connection credentials for DBIx::Class::Schema'
@@ -82,4 +82,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/DBIx/Class/Schema/Config.pm
+/usr/lib/perl5/*
