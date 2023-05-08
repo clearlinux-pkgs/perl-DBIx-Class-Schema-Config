@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-Schema-Config
 Version  : 0.001014
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SY/SYMKAT/DBIx-Class-Schema-Config-0.001014.tar.gz
 Summary  : 'Manage connection credentials for DBIx::Class::Schema'
